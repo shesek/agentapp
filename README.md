@@ -11,7 +11,7 @@ Inspired by [supertest](https://github.com/visionmedia/supertest)'s
 Install the `appagent` and `superagent` packages from npm.
 The superagent package should be installed alongside appagent
 (it is not installed as a dependency of appagent - it expects it to
-already be installed by a parent package)
+already be installed by a parent package).
 
 
 ```bash
