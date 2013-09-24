@@ -24,11 +24,11 @@ request.get('/', function(err, res) { ... });
 request.post('/').end(function(err, res) { ... });
 
 // Install as a `request` property of an app
-request.install(app);
+appagent.install(app);
 app.request.put('/', ...);
 
 // Or install globally on http.Server prototype
-request.install();
+appagent.install();
 ```
 
 ### License
