@@ -6,10 +6,16 @@ Send requests to local HTTP servers (http.Server, express, connect or a function
 Inspired by [supertest](https://github.com/visionmedia/supertest)'s
 `request(app).method()` API.
 
-### Install
+### Installation
+
+Install the `appagent` and `superagent` packages from npm.
+The superagent package should be installed alongside appagent
+(it is not installed as a dependency of appagent - it expects it to
+already be installed by a parent package)
+
 
 ```bash
-$ npm install appagent
+$ npm install appagent superagent
 ```
 
 ### Usage
