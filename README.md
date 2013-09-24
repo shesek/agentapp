@@ -23,11 +23,12 @@ var request = appagent(app);
 request.get('/', function(err, res) { ... });
 request.post('/').end(function(err, res) { ... });
 
-// Install as a `request` property of an app
+// Install as a `client` property of an app
 request.install(app);
-app.request.put('/', ...);
+app.client.put('/', ...);
 
-// Or install globally on http.Server prototype
+// Or install globally on http.Server prototype, to make it available
+// on all apps
 request.install();
 ```
 

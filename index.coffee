@@ -23,5 +23,7 @@ get_url = (app, path='') ->
   "#{protocol}://127.0.0.1:#{addr.port}"
 
 exports.install = (target=http.Server::) ->
-  Object.defineProperty target, 'request', writable: true, get: ->
-    @request = new AppAgent this
+  Object.defineProperty target, 'client', configurable: true, get: ->
+    value = new AppAgent this
+    Object.defineProperty this, 'client', { value }
+    value

@@ -42,3 +42,9 @@ describe 'appagent', ->
   it 'allows to specify a base path', (done) ->
     appagent(echo, '/foo').get '/bar', test_result 'GET /foo/bar', done
 
+  describe 'installation', ->
+    it 'works', (done) ->
+      app = express()
+      app.put '/foo', echo
+      appagent.install(app)
+      app.client.put '/foo', test_result 'PUT /foo', done

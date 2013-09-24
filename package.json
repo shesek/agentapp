@@ -1,25 +1,24 @@
 {
   "name": "appagent",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Send requests to local HTTP servers (http.Server, express, connect or a function) with superagent",
-  "keywords": [ "superagent" ],
+  "keywords": [
+    "superagent"
+  ],
   "repository": "https://github.com/shesek/appagent",
-  
   "main": "index.js",
   "scripts": {
     "test": "mocha",
     "prepublish": "coffee -c index.coffee"
   },
-
   "dependencies": {
     "methods": "0.0.1"
   },
   "devDependencies": {
-    "mocha": "~1.12.0",
-    "express": "~3.3.4",
+    "mocha": "~1.13.0",
+    "express": "~3.4.0",
     "superagent": "~0.15.4"
   },
-
   "author": "Nadav Ivgi",
   "license": "BSD"
 }

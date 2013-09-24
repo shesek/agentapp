@@ -63,10 +63,15 @@
     if (target == null) {
       target = http.Server.prototype;
     }
-    return Object.defineProperty(target, 'request', {
-      writable: true,
+    return Object.defineProperty(target, 'client', {
+      configurable: true,
       get: function() {
-        return this.request = new AppAgent(this);
+        var value;
+        value = new AppAgent(this);
+        Object.defineProperty(this, 'client', {
+          value: value
+        });
+        return value;
       }
     });
   };
